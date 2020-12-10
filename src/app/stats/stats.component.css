@@ -1,0 +1,32 @@
+.close {
+    border: none;
+}
+
+.modal{
+    display: block !important;
+}
+
+.modal-dialog{
+    overflow-y: initial !important;
+}
+
+.modal-body{
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.text-style-count {
+    font-family: 'Courier New', monospace;
+
+    font-weight: bold;
+}
+
+.text-style-status {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.text-style-time {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}

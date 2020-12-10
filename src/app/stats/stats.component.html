@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center">
+    <button class="btn btn-outline-success" (click)="open(statsModal)">Show stats</button>
+</div>
+
+<ng-template #statsModal let-modal>
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-basic-title">Stats</h3>
+    </div>
+    <div class="col-12 d-flex modal-body" *ngIf="stats.length > 0">
+        <div class="col-4">
+            <p><strong>STATS: </strong></p>
+            <div class="border-right" *ngFor="let stat of stats">
+                <span class="text-style-count text-danger">Count: </span> {{stat.count}} <br>
+                <span class="text-style-status text-primary">Status: </span> {{stat.status}} <br>
+                <span class="text-style-time text-success">Time: </span> {{stat.timeStamp.toLocaleTimeString()}}<br><br>
+            </div>
+        </div>
+        <div class="col-8 px-5">
+            <p><strong>JSON: </strong></p>
+            {{statsAsJson}}
+        </div>
+    </div>
+    <div class="col-12 d-flex modal-body justify-content-center" *ngIf="stats.length == 0">
+        <h4>No stats available</h4>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" (click)="modal.close('Save click')">Close</button>
+    </div>
+</ng-template>
