@@ -1,0 +1,20 @@
+<div class="h-100" [ngClass]="darkModeEnabled==true ? 'background-page-dark' : 'background-page-light'">
+    <div class="row align-items-center m-0 h-100">
+        <div class="col-6 mx-auto">
+            <h1 class="p-3 d-flex justify-content-center h-100" [ngClass]="darkModeEnabled==true ? 'title-light' : 'title-dark'">Light Switch</h1>
+            <div class="jumbotron">
+                <div class="d-flex justify-content-center">
+                    <i class="far fa-moon icon"></i>
+                    <span class="theme-label py-2 px-2"><b>Night Mode</b></span>
+                    <div class="py-1 px-2">
+                        <label class="switch">
+                            <input type="checkbox" checked (click)="toggleDarkMode()">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <app-stats [stats]=stats></app-stats>
+        </div>
+    </div>
+</div>
